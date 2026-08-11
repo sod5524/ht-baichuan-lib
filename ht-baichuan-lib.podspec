@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
 
   # ── Frameworks ──────────────────────────────────────────────
   s.vendored_frameworks = Dir.glob('Frameworks/**/*.framework').map { |f| f.sub(%r{^\./}, '') }
+  s.exclude_files = 'Frameworks/**/*.{DS_Store,gitkeep}'
 
   # ── 资源文件 ───────────────────────────────────────────────
 
