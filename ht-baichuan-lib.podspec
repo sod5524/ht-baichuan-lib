@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/sod5524/ht-baichuan-lib'
   s.license      = { :type => 'MIT', :text => 'MIT License' }
   s.author       = { 'HT' => '' }
-  s.source       = { :git => 'https://github.com/sod5524/ht-baichuan-lib.git', :tag => s.version.to_s }
+  s.source       = { :http => 'https://github.com/sod5524/ht-baichuan-lib.git' }
   s.platform     = :ios, '13.0'
 
   # ── Frameworks ──────────────────────────────────────────────
