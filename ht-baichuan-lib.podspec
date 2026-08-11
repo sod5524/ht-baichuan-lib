@@ -8,12 +8,12 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/sod5524/ht-baichuan-lib'
   s.license      = { :type => 'MIT', :text => 'MIT License' }
   s.author       = { 'HT' => '' }
-  s.source       = { :http => 'https://github.com/sod5524/ht-baichuan-lib.git' }
+  s.source       = { :git => 'https://github.com/sod5524/ht-baichuan-lib.git', :tag => s.version.to_s }
   s.platform     = :ios, '13.0'
 
   # ── Frameworks ──────────────────────────────────────────────
   s.vendored_frameworks = Dir.glob('Frameworks/**/*.framework').map { |f| f.sub(%r{^\./}, '') }
-  s.exclude_files = 'Frameworks/**/*.{DS_Store,gitkeep}'
+  s.exclude_files = ['Frameworks/**/.*', 'Frameworks/**/*.{DS_Store,gitkeep,gitignore,sh}', '.*', './.*']
 
   # ── 资源文件 ───────────────────────────────────────────────
 
