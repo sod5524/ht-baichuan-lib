@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT' }
   s.author       = { 'HT' => '' }
   s.source       = { :git => 'https://github.com/sod5524/ht-baichuan-lib.git', :tag => s.version.to_s }
-  s.platform     = :ios, '11.0'
+  s.platform     = :ios, '13.0'
 
   # ── Frameworks ──────────────────────────────────────────────
   s.vendored_frameworks = Dir.glob('Frameworks/**/*.framework').map { |f| f.sub(%r{^\./}, '') }
