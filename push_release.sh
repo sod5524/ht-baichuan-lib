@@ -43,8 +43,9 @@ echo ">> git remote ..."
 git remote remove origin 2>/dev/null || true
 git remote add origin "$REMOTE_URL"
 
-echo ">> git push ..."
-git push -u origin main --force --tags
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+echo ">> git push (branch: $BRANCH) ..."
+git push -u origin "$BRANCH" --tags
 
 echo ""
 echo "== 推送完成 =="
