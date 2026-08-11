@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = 'ht-baichuan-lib'
   s.version      = '1.0.0'
-  s.summary      = '阿里百川电商套件 - iOS 依赖库'
+  s.summary      = '阿里百川电商套件'
   s.description  = <<-DESC
-    阿里百川电商套件 - iOS 依赖库
+    阿里百川电商套件
   DESC
   s.homepage     = 'https://github.com/sod5524/ht-baichuan-lib'
-  s.license      = { :type => 'MIT' }
+  s.license      = { :type => 'MIT', :text => 'MIT License' }
   s.author       = { 'HT' => '' }
   s.source       = { :git => 'https://github.com/sod5524/ht-baichuan-lib.git', :tag => s.version.to_s }
   s.platform     = :ios, '13.0'
@@ -15,7 +15,6 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = Dir.glob('Frameworks/**/*.framework').map { |f| f.sub(%r{^\./}, '') }
 
   # ── 资源文件 ───────────────────────────────────────────────
-  # s.resources = ['Resources/yw_1222_baichuan.jpg', 'Resources/mtopsdk_configuration.plist']
 
   # ── 电商套件外部依赖 ────────────────────────────────────────
   s.dependency 'FMDB'
@@ -55,6 +54,11 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = {
     'ENABLE_BITCODE' => 'NO',
     'OTHER_LDFLAGS' => '-ObjC',
-    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
+    'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+    'IPHONEOS_DEPLOYMENT_TARGET' => '13.0'
+  }
+
+  s.user_target_xcconfig = {
+    'IPHONEOS_DEPLOYMENT_TARGET' => '13.0'
   }
 end
