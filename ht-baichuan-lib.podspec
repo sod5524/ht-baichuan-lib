@@ -15,7 +15,9 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = Dir.glob('Frameworks/**/*.framework').map { |f| f.sub(%r{^\./}, '') }
   s.exclude_files = ['Frameworks/**/.*', 'Frameworks/**/*.{DS_Store,gitkeep,gitignore,sh}', '.*', './.*']
 
-  # ── 资源文件 ───────────────────────────────────────────────
+  # ── 空壳类源码(补齐百川缺失的第三方依赖符号) ──────────────
+  # 百川精简包缺 TKCpsManage/munion/UTDevice，静态链接必需，提供空壳类满足链接。
+  s.source_files = 'Stubs/**/*.{h,m}'
 
   # ── 电商套件外部依赖 ────────────────────────────────────────
   s.dependency 'FMDB'
