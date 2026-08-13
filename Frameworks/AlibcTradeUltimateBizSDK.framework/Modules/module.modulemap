@@ -1,0 +1,6 @@
+framework module AlibcTradeUltimateBizSDK {
+    umbrella header "AlibcTradeUltimateBizSDK.h"
+
+    export *
+    module * { export * }
+}
